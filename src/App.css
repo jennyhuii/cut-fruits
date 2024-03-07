@@ -17,3 +17,8 @@
   cursor: pointer;
   z-index: 12;
 }
+
+.fruit-container {
+  display: flex;
+  flex-direction: column;
+}
