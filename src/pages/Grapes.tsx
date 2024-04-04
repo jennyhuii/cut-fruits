@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import "../App.css";
 import { TYPE_SPEED } from "../constants";
@@ -6,6 +6,13 @@ import { TYPE_SPEED } from "../constants";
 const CallMe = require("../assets/vidoes/call-me.mp4");
 
 const Grapes = () => {
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartTyping(true);
+    }, 5000);
+  });
   return (
     <div>
       <div className="fruit-container">
@@ -16,10 +23,13 @@ const Grapes = () => {
           controls
           src={CallMe}
         />
-        <ReactTyped
-          strings={["Why aren't you calling me? I'm worried about you."]}
-          typeSpeed={TYPE_SPEED}
-        />
+        <br />
+        {startTyping && (
+          <ReactTyped
+            strings={["Why aren't you calling me? I'm worried about you."]}
+            typeSpeed={TYPE_SPEED}
+          />
+        )}
       </div>
     </div>
   );

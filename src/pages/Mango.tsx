@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import "../App.css";
 import { TYPE_SPEED } from "../constants";
@@ -6,6 +6,13 @@ import { TYPE_SPEED } from "../constants";
 const WearMoreClothes = require("../assets/vidoes/wear-more-clothes.mp4");
 
 const Mango = () => {
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartTyping(true);
+    }, 5000);
+  });
   return (
     <div>
       <div className="fruit-container">
@@ -16,12 +23,15 @@ const Mango = () => {
           controls
           src={WearMoreClothes}
         />
-        <ReactTyped
-          strings={[
-            "Is it snowing outside? Put on more layers since it's so cold outside. Don't focus on aesthetics.",
-          ]}
-          typeSpeed={TYPE_SPEED}
-        />
+        <br />
+        {startTyping && (
+          <ReactTyped
+            strings={[
+              "Is it snowing outside? Put on more layers since it's so cold outside.",
+            ]}
+            typeSpeed={TYPE_SPEED}
+          />
+        )}
       </div>
     </div>
   );

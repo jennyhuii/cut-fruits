@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import "../App.css";
 import { TYPE_SPEED } from "../constants";
@@ -6,6 +6,14 @@ import { TYPE_SPEED } from "../constants";
 const GoToBed = require("../assets/vidoes/go-to-bed.mp4");
 
 const Apple = () => {
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartTyping(true);
+    }, 5000);
+  });
+
   return (
     <div>
       <div className="fruit-container">
@@ -16,8 +24,10 @@ const Apple = () => {
           controls
           src={GoToBed}
         />
-
-        <ReactTyped strings={["Go to bed early."]} typeSpeed={TYPE_SPEED} />
+        <br />
+        {startTyping && (
+          <ReactTyped strings={["Go to bed early."]} typeSpeed={TYPE_SPEED} />
+        )}
       </div>
     </div>
   );
