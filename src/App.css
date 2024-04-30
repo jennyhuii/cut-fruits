@@ -21,4 +21,29 @@
 .fruit-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  background-color: black;
+  padding: 0.25rem;
 }
