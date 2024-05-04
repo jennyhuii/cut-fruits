@@ -78,7 +78,7 @@ const Fruits = () => {
           <span className="subtitle">
             <ReactTyped
               strings={[
-                "last month, my best friend’s daughter is getting married",
+                "last month, my best friend’s daughter got married",
                 "i want you to get married too",
                 "so i can be a grandma soon",
               ]}
@@ -108,7 +108,7 @@ const Fruits = () => {
               strings={[
                 "what are you doing today?",
                 "you didn’t answer my calls",
-                "are you busy? i’m worried about you",
+                "are you busy? i miss you",
               ]}
               typeSpeed={TYPE_SPEED}
               onComplete={() => setTimeout(() => setCallMe(false), 1500)}
