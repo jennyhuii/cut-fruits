@@ -39,11 +39,37 @@ video {
   top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .subtitle {
   background-color: black;
   padding: 0.25rem;
+  margin-left: 4rem;
+  align-self: flex-start;
+}
+
+.trail-text {
+  position: relative;
+  color: black;
+  will-change: transform, opacity;
+  overflow: hidden;
+  text-align: right;
+}
+
+.trail-text > div {
+  padding-right: 0.05em;
+  overflow: hidden;
+}
+
+.text-background {
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.story {
+  align-self: flex-end;
+  margin-right: 4rem;
+  margin-top: 1rem;
 }
