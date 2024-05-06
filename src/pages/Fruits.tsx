@@ -257,7 +257,7 @@ const Fruits = () => {
         {startStory5 && (
           <span className="story">
             <Trail open={true}>
-              <span className="text-background">Unripe mangos are sour.</span>
+              <span className="text-background">Unripe mangos are sour and hard.</span>
               <span className="text-background">They take time to ripen.</span>
             </Trail>
           </span>
